@@ -14,10 +14,10 @@ const AllFiles = ({ files }: { files: Array<any> }) => {
                 return a.name.localeCompare(b.name)
             }
             if (a[sortType] < b[sortType]) {
-                return -1;
+                return 1;
             }
             if (a[sortType] > b[sortType]) {
-                return 1;
+                return -1;
             }
             return 0;
         });
