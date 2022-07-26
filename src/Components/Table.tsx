@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { AllFiles } from './AllFiles'
 import { Folder } from './Folder'
 
 const Table = () => {
@@ -20,7 +21,10 @@ const Table = () => {
         fetchData()
     }, [])
 
-    if (isLoading) return <>Loading</>
+    if (isLoading || !data) return <>Loading</>
+
+    console.log(data);
+
 
     return (
         <div>
@@ -31,6 +35,7 @@ const Table = () => {
                     </div>
                 )
             })}
+            <AllFiles files={data?.flat()} />
         </div>
     )
 }
