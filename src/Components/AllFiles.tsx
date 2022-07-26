@@ -10,6 +10,9 @@ const AllFiles = ({ files }: { files: Array<any> }) => {
 
     if (sortType) {
         filtered = files.sort((a, b) => {
+            if (sortType === "name") {
+                return a.name.localeCompare(b.name)
+            }
             if (a[sortType] < b[sortType]) {
                 return -1;
             }
