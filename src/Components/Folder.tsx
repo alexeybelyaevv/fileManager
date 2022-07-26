@@ -56,8 +56,8 @@ const Folder = ({ name, files }: { name: string, files: Array<any> }) => {
                                 return (
                                     <tr key={key}>
                                         <td>{item.name}</td>
-                                        <td>{moment.unix(item.mtime).format("DD/MM/YYYY HH:mm")}</td>
-                                        <td>{moment.unix(item.atime).format("DD/MM/YYYY HH:mm")}</td>
+                                        <td>{moment.unix(item.mtime).format("DD/MM/YYYY HH:mm:ss")}</td>
+                                        <td>{moment.unix(item.atime).format("DD/MM/YYYY HH:mm:ss")}</td>
                                         <td>{item.size}</td>
                                     </tr>
                                 )
