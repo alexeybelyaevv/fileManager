@@ -23,9 +23,6 @@ const Table = () => {
 
     if (isLoading || !data) return <>Loading</>
 
-    console.log(data);
-
-
     return (
         <div>
             {folders.map((item: string, key: number) => {
